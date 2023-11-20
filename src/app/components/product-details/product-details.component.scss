@@ -1,0 +1,65 @@
+/* product-details.component.scss */
+
+.volver{
+  padding-bottom: 25%;
+}
+
+.product-details-container {
+  max-width: 1200px; /* O el ancho que desees */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.product-details-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.product-info {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.product-info p {
+  margin-bottom: 10px;
+}
+
+.add-review-form,
+.product-reviews {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.example-button-row {
+  margin-top: 10px;
+}
+
+.review-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.review-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* product-details.component.scss */
+
+mat-form-field {
+  width: 100%;
+  margin-top: 10px; /* Puedes ajustar este valor según sea necesario */
+}
+
+.mat-input-element {
+  width: 100%;
+}

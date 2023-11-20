@@ -1,0 +1,18 @@
+<!-- login.component.html -->
+<mat-card class="LoginCard">
+  <mat-card-content class="IniciarSesionTxt">Iniciar Sesión</mat-card-content>
+  <form class="example-form" #f="ngForm">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Usuario" name="username" [(ngModel)]="username"> <!--debes asegurarte de que cada campo dentro de tu formulario tenga un atributo "name" asociado con el mismo nombre que estás utilizando en tus ngModel-->
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Contraseña" type="password" name="password" [(ngModel)]="password">
+    </mat-form-field>
+  </form>
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button (click)="onLogin()" routerLink="/home">Ingresar</button>
+    </div>
+  </section>
+</mat-card>

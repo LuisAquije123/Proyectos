@@ -1,0 +1,21 @@
+<section>
+  <h1>ZAPATOS ADIDAS</h1>
+  <a>Conoce todo el catálogo de calzado adidas, zapatos con el diseño y tecnología de la marca de las tres rayas.</a>
+</section>
+<div class="product-container">
+
+  <mat-card *ngFor="let footwear of footwears" class="product-card">
+    <button [routerLink]="['/productos', footwear.id]">
+      <mat-card-content>
+        <div class="product-image">
+          <img [src]="footwear.image" alt="{{ footwear.brand }} {{ footwear.model }}">
+        </div>
+        <div class="product-details">
+          <h2>{{ footwear.brand }} {{ footwear.model }}</h2>
+          <p>{{ footwear.price | currency:'USD':'symbol':'1.2-2' }}</p>
+        </div>
+      </mat-card-content>
+    </button>
+
+  </mat-card>
+</div>

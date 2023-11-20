@@ -1,0 +1,16 @@
+<mat-card class="RegisterCard">
+  <mat-card-content class="RegistrarTxt">Registrarse</mat-card-content>
+  <form class="example-form" #f="ngForm">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Usuario" name="username" [(ngModel)]="username">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Contraseña" type="password" name="password" [(ngModel)]="password">
+    </mat-form-field>
+  </form>
+  <section>
+    <div class="example-button-row">
+      <button mat-raised-button routerLink="/login" (click)="onRegister()" >Registrarse</button>
+    </div>
+  </section>
+</mat-card>

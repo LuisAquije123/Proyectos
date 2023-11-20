@@ -1,0 +1,64 @@
+/* Estilos para home.component.scss */
+
+.banner {
+  background-image: url('https://jdesblog.s3.amazonaws.com/wp-content/uploads/2023/02/header-timeline-adidas-08-23.jpg'); /* Cambia esto a la ruta real de tu imagen de banner */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  .explore-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+  }
+}
+
+.featured-products {
+  margin-top: 30px;
+}
+
+.featured-product {
+  margin-bottom: 30px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  a {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+}

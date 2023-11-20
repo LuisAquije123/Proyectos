@@ -1,0 +1,15 @@
+/* footer.component.scss */
+.footer-container {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}

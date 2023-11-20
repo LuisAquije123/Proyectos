@@ -1,0 +1,55 @@
+// products.component.scss
+
+section {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-style: italic; // Agregado para hacer el h1 en cursiva
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; // Ajusta según sea necesario
+  flex-wrap: wrap;
+  padding: 20px; // Ajusta según sea necesario
+}
+
+.product-card {
+  width: 300px; // Ancho inicial, ajusta según sea necesario
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden; // Evitar que las imágenes sobresalgan del card
+  display: inline-block;
+  flex-wrap: wrap;
+  transition: transform 0.3s; // Agregado para un efecto de transición suave
+}
+
+.product-card:hover {
+  transform: scale(1.05); // Efecto de escala al pasar el ratón
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto; // Imágenes se ajustarán al ancho del contenedor
+  border-radius: 5px 5px 0 0; // Borde redondeado solo arriba
+}
+
+.product-details {
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px); // Dos columnas en pantallas más pequeñas
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-card {
+    width: calc(100% - 20px); // Una columna en pantallas aún más pequeñas
+  }
+}

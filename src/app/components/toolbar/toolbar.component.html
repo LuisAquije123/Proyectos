@@ -1,0 +1,15 @@
+<!-- toolbar.component.html -->
+<p>
+  <mat-toolbar class="toolbar-container">
+    <!-- Botones de navegación -->
+    <button mat-button routerLink="/login" class="Btns">Iniciar Sesión</button>
+    <button mat-button routerLink="/registro" class="Btns">Registrarse</button>
+    <span *ngIf="getLoggedInUser()" class="welcome-message">
+      <button mat-button [matMenuTriggerFor]="cuenta"><mat-icon>account_circle</mat-icon></button>
+      <mat-menu #cuenta="matMenu">
+        <a mat-menu-item class="disabled-link">{{ getLoggedInUser() }}</a>
+        <button mat-menu-item (click)="onLogout()">Cerrar Sesión</button>
+      </mat-menu>
+    </span>
+  </mat-toolbar>
+</p>

@@ -1,0 +1,49 @@
+<section *ngIf="selectedFootwear" class="product-details-container">
+  <h1>{{ selectedFootwear.brand }} {{ selectedFootwear.model }}</h1>
+  <div class="product-details-content">
+    <div class="product-image">
+      <img [src]="selectedFootwear.image" alt="{{ selectedFootwear.brand }} {{ selectedFootwear.model }}">
+    </div>
+    <div class="product-info">
+      <p>Precio: {{ selectedFootwear.price | currency:'USD':'symbol':'1.2-2' }}</p>
+      <p>Talla: {{ selectedFootwear.size }}</p>
+      <p>Color: {{selectedFootwear.color}}</p>
+      <p>Material: {{selectedFootwear.material}}</p>
+      <p>Género: {{selectedFootwear.gender}}</p>
+      <p>Descripcion: {{selectedFootwear.description}}</p>
+      <p>Caracteristicas: {{selectedFootwear.features}}</p>
+      <p>Categorias: {{selectedFootwear.categories}}</p>
+
+      <div *ngIf="getLoggedInUser()" class="add-review-form">
+        <h2>Agregar Reseña:</h2>
+        <form #reviewForm="ngForm" (ngSubmit)="onSubmitReview(reviewForm)">
+          <label>Calificación:  </label>
+          <select id="rating" name="rating" [(ngModel)]="selectedRating">
+            <option *ngFor="let i of [1, 2, 3, 4, 5]" [value]="i">{{ i }}</option>
+          </select>
+
+          <mat-form-field>
+            <mat-label>Danos tu opinión</mat-label>
+            <textarea matInput name="comment" [(ngModel)]="reviewComment"></textarea>
+          </mat-form-field>
+
+          <div class="example-button-row">
+            <button mat-raised-button type="submit">Publicar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Muestra las reseñas de manera ordenada -->
+      <div *ngIf="selectedFootwear.reviews && selectedFootwear.reviews.length > 0" class="product-reviews">
+        <h2>Reseñas:</h2>
+        <div class="review-item" *ngFor="let review of selectedFootwear.reviews">
+          <strong> <h3>{{ review.user }}</h3></strong>
+          <b>Puntuación:</b> {{ review.rating }}
+          <h3>{{ review.comment }}</h3>
+        </div>
+      </div>
+      <button mat-raised-button color="primary" (click)="goBack()" >Volver a la lista de productos</button>
+    </div>
+  </div>
+  <section class="volver"></section>
+</section>
