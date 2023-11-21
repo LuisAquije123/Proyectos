@@ -7,7 +7,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class FootwearService {
-  private apiUrl = 'http://20.125.136.147:8080/api/v1/footwears';
+  private apiUrl = 'http://localhost:8080/api/v1/footwears';
 
   constructor(private http: HttpClient) { }
 
