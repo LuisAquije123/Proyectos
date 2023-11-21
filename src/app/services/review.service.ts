@@ -7,7 +7,7 @@ import {Review} from "../models/review";
   providedIn: 'root',
 })
 export class ReviewService {
-  private apiUrl = 'http://20.125.136.147:8080/api/v1'; // Ajusta la URL base de tu API
+  private apiUrl = 'http://localhost:8080/api/v1'; // Ajusta la URL base de tu API
 
   constructor(private http: HttpClient) {}
   getReviews(footwearId: string): Observable<Review[]> {
